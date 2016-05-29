@@ -1,1 +1,1 @@
-# quickcheck-paper
+# Quickcheck Paper
