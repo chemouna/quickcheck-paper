@@ -1,4 +1,4 @@
-module Main.Test where
+module QCPaper.Test where
 
 import Test.QuickCheck
 
@@ -50,3 +50,18 @@ prop_Insert5 x xs =
 -- do i <- choose(0, length xs - 1)
 --    return (xs!!i)
 
+
+-- With alternatives
+-- oneof <list of generators>
+-- frequency :: [(Int, Gen a)] -> Gen a
+-- ex: frequency [(2,return True), (1,return False)]
+
+-- Generating Recursive Data Types
+
+data Tree = Leaf Int | Branch Tree Tree
+tree = sized tree'
+tree' 0 = liftM Leaf arbitrary
+tree' n | n>0 =
+	oneof [liftM Leaf arbitrary,
+	       liftM2 Branch subtree subtree]
+  where subtree = tree' (n `div` 2)

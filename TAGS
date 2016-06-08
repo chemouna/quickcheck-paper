@@ -1,0 +1,24 @@
+
+./Setup.hs,15
+main main1,2
+
+./src/Main.hs,22
+module Main Main0,1
+
+./test/examples.hs,0
+
+./test/QCPaper.hs,399
+module QCPaper.Test QCPaper.Test0,1
+prop_RevRev prop_RevRev5,6
+prop_RevId prop_RevId8,9
+ordered ordered13,14
+insert insert14,15
+prop_Insert prop_Insert16,17
+prop_Insert2 prop_Insert222,23
+prop_Insert4 prop_Insert432,33
+prop_Insert5 prop_Insert542,43
+data Tree Tree60,61
+data Tree = Leaf Leaf60,61
+data Tree = Leaf Int | Branch Branch60,61
+tree tree61,62
+tree' tree'62,63
